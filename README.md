@@ -111,6 +111,58 @@ python final.py
 
 All results populate `step*_output/` folders.
 
+## Dataset Management with DVC
+
+This project uses **DVC (Data Version Control)** to manage the large ~9GB dataset efficiently.
+
+### First-Time Setup (Clone)
+
+When you first clone this repo, the dataset folder is empty. To download the actual data:
+
+```bash
+pip install dvc
+dvc pull
+```
+
+This will fetch the dataset from the remote storage.
+
+### After Cloning
+
+```bash
+# Install dependencies
+pip install -r requirements.txt  # (if created)
+dvc pull  # Download dataset
+
+# Run pipeline
+python verify.py
+```
+
+### When Updating Dataset
+
+If you modify the dataset:
+
+```bash
+# Track changes with DVC
+dvc add datasets/
+
+# Commit and push
+git add datasets.dvc .gitignore
+git commit -m "Update dataset"
+git push
+dvc push  # Upload to remote storage
+```
+
+### DVC Remote Storage
+
+By default, DVC uses local cache. For team collaboration, configure a remote:
+
+```bash
+dvc remote add -d myremote <s3://bucket or /path/to/shared/storage>
+dvc push  # Upload to remote
+```
+
+Learn more: [DVC Documentation](https://dvc.org/doc)
+
 ## Output Files
 
 | File | Contents |
