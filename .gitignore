@@ -1,0 +1,96 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environments
+.venv/
+venv/
+ENV/
+env/
+.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Data & Datasets
+datasets/
+*.zip
+*.tar
+*.tar.gz
+*.rar
+
+# Model files & weights
+*.xml
+*.pb
+*.pth
+*.pt
+*.weights
+*.h5
+*.keras
+models/
+
+# Output directories (keep structure, ignore contents)
+step1_output/*
+!step1_output/.gitkeep
+step2_output/*
+!step2_output/.gitkeep
+step3_output/*
+!step3_output/.gitkeep
+step4_output/*
+!step4_output/.gitkeep
+step5_output/*
+!step5_output/.gitkeep
+
+# Temporary files
+temp/
+tmp/
+*.tmp
+*.log
+*.cache
+
+# OS specific
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# Images/Videos (large files)
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.flv
+
+# Large data files
+*.csv
+*.xlsx
+*.xls
