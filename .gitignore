@@ -42,8 +42,7 @@ env/
 .ipynb_checkpoints/
 *.ipynb
 
-# Data & Datasets
-datasets/
+# Data & Datasets (tracked via Git LFS)
 *.zip
 *.tar
 *.tar.gz
